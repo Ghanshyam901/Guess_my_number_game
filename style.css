@@ -181,9 +181,12 @@ h1 {
   }
   
   .again {
+    height: 5rem;
+    /* width: ; */
+    font-size:1rem;
     position: absolute;
     top: 9rem;
-    left:10rem;
+    left:4rem;
     
   }
   

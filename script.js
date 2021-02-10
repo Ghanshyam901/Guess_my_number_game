@@ -39,9 +39,15 @@ document.querySelector('.check').addEventListener('click',function(){
             document.querySelector('.highscore').textContent= highScore;
         }
     }
-
+    if(guess > 20){
+        document.querySelector('.message').textContent ='guess between 1 to 20';
+        GameScore--;
+        document.querySelector('.score').textContent = GameScore;
+    }
 
     else if(guess > SecretNumber){
+
+      
 
         if(GameScore > 1){
             document.querySelector('.message').textContent ='too  high number';
