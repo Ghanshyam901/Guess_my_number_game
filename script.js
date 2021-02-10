@@ -10,12 +10,11 @@
 // document.querySelector('.guess').value =23;
 // concole.log(document.querySelector('.guess').value);
 
-const SecretNumber = Math.trunc(Math.random()*20)+1;
+let SecretNumber = Math.trunc(Math.random()*20)+1;
 
 let GameScore = 20;
-document.querySelector('.number').textContent = SecretNumber;
 
-
+let highScore=0;
 
 document.querySelector('.check').addEventListener('click',function(){
 
@@ -25,9 +24,23 @@ document.querySelector('.check').addEventListener('click',function(){
     if(!guess){
         document.querySelector('.message').textContent ='No Input !';
     }
+
+
     else if(guess == SecretNumber){
         document.querySelector('.message').textContent ='Correct ans';
+        document.querySelector('.number').textContent = SecretNumber;
+
+
+        document.querySelector('body').style.backgroundColor='green';
+        document.querySelector('.number').style.width='25rem';
+
+        if(GameScore > highScore){
+            highScore = GameScore;
+            document.querySelector('.highscore').textContent= highScore;
+        }
     }
+
+
     else if(guess > SecretNumber){
 
         if(GameScore > 1){
@@ -49,6 +62,8 @@ document.querySelector('.check').addEventListener('click',function(){
 
             GameScore--;
             document.querySelector('.score').textContent = GameScore;
+            
+
         }
         else{
             document.querySelector('.message').textContent ='you lost the game '; 
@@ -60,4 +75,22 @@ document.querySelector('.check').addEventListener('click',function(){
         // GameScore--;
         // document.querySelector('.score').textContent = GameScore;
     }
+});
+
+document.querySelector('.again').addEventListener('click',function(){
+
+    GameScore = 20;
+    SecretNumber = Math.trunc(Math.random()*20)+1;
+    
+    document.querySelector('.message').textContent='Start guessing...';
+
+    document.querySelector('.score').textContent=GameScore;
+
+    document.querySelector('.number').textContent='?';
+    document.querySelector('.guess').value='';
+
+    document.querySelector('body').style.backgroundColor='#222';
+
+    document.querySelector('.number').style.width='15rem';
+    
 });

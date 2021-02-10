@@ -117,3 +117,117 @@ h1 {
 .label-score {
   margin-bottom: 2rem;
 }
+
+@media screen and (max-width:800px){
+  header {
+    position: relative;
+    height: 40vh;
+    border-bottom: 4px solid #eee;
+  }
+  
+  main {
+    height: 80vh;
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .left {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .right {
+    width: 30rem;
+    font-size: 1.2rem;
+  }
+  
+  /* ELEMENTS STYLE */
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    position: absolute;
+    width: 90%;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .number {
+    background: #eee;
+    color: #333;
+    font-size: 5rem;
+    width: 15rem;
+    padding: 2rem 0rem;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+  
+  .between {
+    font-size: 1.4rem;
+    position: absolute;
+    top: 4rem;
+    right: 17%;
+  }
+  
+  .again {
+    position: absolute;
+    top: 8rem;
+    left: 24%;
+  }
+  
+  .guess {
+    background: none;
+    border: 4px solid #eee;
+    font-family: inherit;
+    color: inherit;
+    font-size: 3rem;
+    padding: 2rem;
+    width: 13rem;
+    height:7rem;
+    text-align: center;
+    display: block;
+    margin-bottom: 10rem;
+  }
+  
+  .btn {
+    border: none;
+    background-color: #eee;
+    color: #222;
+    font-size: 2rem;
+    font-family: inherit;
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+    margin-left: 2rem;
+    margin-bottom: 8rem;
+  }
+  
+  .btn:hover {
+    background-color: #ccc;
+  }
+  
+  .message {
+    margin-top: -9rem;
+    margin-left:1rem;
+    margin-bottom: rem;
+    height: 5rem;
+  }
+  
+  .label-score {
+
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    /* padding-bottom:10rem; */
+  }
+  .label-highscore{
+    margin-bottom: -5rem;
+    margin-left: 1rem;
+  }
+
+}
